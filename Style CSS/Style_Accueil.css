@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  transition: transform 0.3s ease;
 }
 
 .sidebar ul {
@@ -85,6 +86,21 @@ body {
 @media (max-width: 768px) {
   .sidebar {
     display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    width: 250px;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .sidebar.show {
+    display: block;
   }
 
   .content {

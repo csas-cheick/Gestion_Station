@@ -18,33 +18,59 @@
     <div class="d-flex">
       <!-- Menu latéral -->
       <nav class="sidebar bg-light p-3">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <button id="GestionVenteBtn" class="btn btn-light text-start w-100">
-              <i class="bi bi-fuel-pump me-2"></i> Gestion de ventes
-            </button>
-          </li>
-          <li class="nav-item">
-            <button id="GestionStockBtn" class="btn btn-light text-start w-100">
-              <i class="bi bi-droplet-fill me-2"></i> Gestion de stocks
-            </button>
-          </li>
-          <li class="nav-item">
-            <button
-              id="GestionCaisseBtn"
-              class="btn btn-light text-start w-100"
-            >
-              <i class="bi bi-cash-stack me-2"></i> Gestion de caisse
-            </button>
-          </li>
-          <li class="nav-item">
-            <button id="AutresBtn" class="btn btn-light text-start w-100">
-              <i class="bi bi-gear-fill me-2"></i> Autres
-            </button>
-          </li>
-        </ul>
+        <!-- Navbar avec le menu hamburger -->
+        <div class="navbar navbar-expand-lg navbar-light">
+          <!-- Bouton hamburger pour petits écrans -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu (sera caché sur petit écran) -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <button
+                  id="GestionVenteBtn"
+                  class="btn btn-light text-start w-100"
+                >
+                  <i class="bi bi-fuel-pump me-2"></i> Gestion de ventes
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="GestionStockBtn"
+                  class="btn btn-light text-start w-100"
+                >
+                  <i class="bi bi-droplet-fill me-2"></i> Gestion de stocks
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="GestionCaisseBtn"
+                  class="btn btn-light text-start w-100"
+                >
+                  <i class="bi bi-cash-stack me-2"></i> Gestion de caisse
+                </button>
+              </li>
+              <li class="nav-item">
+                <button id="AutresBtn" class="btn btn-light text-start w-100">
+                  <i class="bi bi-gear-fill me-2"></i> Autres
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
 
+      <!-- Contenu principal -->
       <div class="content flex-grow-1 p-4">
         <div id="dashboardWindow" class="border p-4 bg-light">
           <h3 class="text-center">Tableau de bord</h3>
