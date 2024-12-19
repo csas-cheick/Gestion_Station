@@ -83,7 +83,9 @@ body {
   color: #6c757d;
 }
 
+/* Media queries for small screens */
 @media (max-width: 768px) {
+  /* Masquer la barre latérale par défaut */
   .sidebar {
     display: none;
     position: absolute;
@@ -95,10 +97,12 @@ body {
     width: 250px;
   }
 
+  /* Afficher le bouton hamburger */
   .navbar-toggler {
     display: block;
   }
 
+  /* Lorsque la sidebar est ouverte, l'afficher */
   .sidebar.show {
     display: block;
   }
