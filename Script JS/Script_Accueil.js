@@ -1,3 +1,4 @@
+// Gérer le clic sur chaque bouton de la sidebar
 const sidebarButtons = document.querySelectorAll(".sidebar button");
 
 sidebarButtons.forEach((button) => {
@@ -12,6 +13,7 @@ sidebarButtons.forEach((button) => {
 function updateDashboardContent(buttonId) {
   const dashboardWindow = document.getElementById("dashboardWindow");
 
+  // Changer le contenu en fonction du bouton sélectionné
   if (buttonId === "GestionVenteBtn") {
     dashboardWindow.innerHTML = `
       <h3 class="text-center">Gestion de ventes</h3>
@@ -39,6 +41,7 @@ function updateDashboardContent(buttonId) {
 const navbarToggler = document.querySelector(".navbar-toggler");
 const sidebar = document.querySelector(".sidebar");
 
+// Ouvrir/fermer le menu latéral au clic sur le bouton hamburger
 navbarToggler.addEventListener("click", function () {
   sidebar.classList.toggle("show");
 });
