@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  transition: transform 0.3s ease;
 }
 
 .sidebar ul {
@@ -83,28 +82,9 @@ body {
   color: #6c757d;
 }
 
-/* Media queries for small screens */
 @media (max-width: 768px) {
-  /* Masquer la barre latérale par défaut */
   .sidebar {
     display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1000;
-    background-color: #f8f9fa;
-    width: 250px;
-  }
-
-  /* Afficher le bouton hamburger */
-  .navbar-toggler {
-    display: block;
-  }
-
-  /* Lorsque la sidebar est ouverte, l'afficher */
-  .sidebar.show {
-    display: block;
   }
 
   .content {

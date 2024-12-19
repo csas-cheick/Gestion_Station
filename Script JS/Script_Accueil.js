@@ -3,11 +3,8 @@ const sidebarButtons = document.querySelectorAll(".sidebar button");
 // Gérer le clic sur chaque bouton dans la sidebar
 sidebarButtons.forEach((button) => {
   button.addEventListener("click", function () {
-    // Supprimer la classe "active" de tous les boutons
     sidebarButtons.forEach((btn) => btn.classList.remove("active"));
-    // Ajouter la classe "active" au bouton cliqué
     this.classList.add("active");
-    // Mettre à jour le contenu du tableau de bord
     updateDashboardContent(this.id);
   });
 });
@@ -38,12 +35,3 @@ function updateDashboardContent(buttonId) {
     `;
   }
 }
-
-// Gérer l'ouverture/fermeture du menu pour les petits écrans
-const navbarToggler = document.querySelector(".navbar-toggler"); // Le bouton hamburger
-const sidebar = document.querySelector(".sidebar"); // La barre latérale
-
-navbarToggler.addEventListener("click", function () {
-  // Basculer la classe 'show' sur la sidebar pour l'afficher/masquer
-  sidebar.classList.toggle("show");
-});
